@@ -152,8 +152,8 @@ def initialize_rest(*, reload_script_modules=False):
             sd_hijack.apply_optimizations()
 
         devices.first_time_calculation()
-    if not shared.cmd_opts.skip_load_model_at_start:
-        Thread(target=load_model).start()
+    # if not shared.cmd_opts.skip_load_model_at_start:
+    #    Thread(target=load_model).start()
 
     from modules import shared_items
     shared_items.reload_hypernetworks()
